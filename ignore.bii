@@ -1,0 +1,7 @@
+external/*
+!external/boost.afio/include/*
+external/boost.afio/include/boost/afio/bindlib/*
+!external/boost.afio/include/boost/afio/bindlib/include/*
+external/boost.afio/include/boost/afio/bindlib/include/boost/*
+
+*.py
