@@ -1,0 +1,4 @@
+[submodule "external/boost.afio"]
+	path = external/boost.afio
+	url = https://github.com/BoostGSoC13/boost.afio.git
+        branch = master
