@@ -44,10 +44,6 @@ ADD_BII_TARGETS()
 INCLUDE(biicode/cmake/tools) # Include tools.cmake file from cmake block from the "biicode" user
 ACTIVATE_CPP14(INTERFACE ${BII_BLOCK_TARGET})
 
-message(STATUS "${CMAKE_CXX_FLAGS}")
-REMOVE(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}" "-std=c++11")
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1y")
-message(STATUS "${CMAKE_CXX_FLAGS}")
 #Include biicode Boost setup
 INCLUDE(biicode/boost/setup)
 
@@ -61,3 +57,5 @@ FIND_PACKAGE (Threads)
 TARGET_LINK_LIBRARIES (${BII_BLOCK_TARGET} INTERFACE ${CMAKE_THREAD_LIBS_INIT})
 
 TARGET_LINK_LIBRARIES (${BII_BLOCK_TARGET} INTERFACE dl)
+
+TARGET_INCLUDE_DIRECTORIES(${BII_BLOCK_TARGET} INTERFACE external/boost.afio/include/)
